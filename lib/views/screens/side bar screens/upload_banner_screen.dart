@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:web_admin/views/screens/side%20bar%20screens/widget/banner_widget.dart';
 
 class UploadBannerScreen extends StatefulWidget {
   static const String routeName = 'UploadBannerScreen';
@@ -89,7 +90,7 @@ class _UploadBannerScreenState extends State<UploadBannerScreen> {
                       ),
                       child:  Center(
                         child: _image != null ? Image.memory(_image, fit: BoxFit.fill,)
-                            :Text('Upload Banners'),
+                            :const Text('Upload Banners'),
                       ),
                     ),
                     const SizedBox(
@@ -120,7 +121,23 @@ class _UploadBannerScreenState extends State<UploadBannerScreen> {
                   child: Text('Save')
               ),
             ],
-          )
+          ),
+          const Divider(
+            color: Colors.grey,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: const Text('Banner',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25
+                ),
+              ),
+            ),
+          ),
+          BannerWidget()
         ],
       ),
     );

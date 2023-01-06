@@ -12,10 +12,11 @@ void main() async{
    await Firebase.initializeApp(
      options: kIsWeb || Platform.isAndroid?const FirebaseOptions(
          apiKey: "AIzaSyA_2OoVhlidtEM2XogTinVhfnAV2076_20",
-         appId: "1:252432202808:web:4904957af1d8de171abacd",
-         messagingSenderId: "252432202808",
+         authDomain: "alex-multistorage.firebaseapp.com",
          projectId: "alex-multistorage",
-       storageBucket: "alex-multistorage.appspot.com"
+         storageBucket: "alex-multistorage.appspot.com",
+         messagingSenderId: "252432202808",
+         appId: "1:252432202808:web:327b7ace5137c5671abacd"
      ):null
    );
   runApp(const MyApp());
